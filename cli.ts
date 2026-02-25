@@ -12,7 +12,6 @@ program
     .action((num1, num2) => {
         console.log(Number(num1) + Number(num2));
     });
-
 program
     .command("sub <num1> <num2>")
     .action((num1, num2) => {
