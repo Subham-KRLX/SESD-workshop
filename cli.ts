@@ -26,7 +26,7 @@ program
         console.log(Number(num1) * Number(num2));
     });
 
-program.command("quote")
+program.command("joke")
 .action(async()=>{
     try{
         const res = await axios.get("https://zenquotes.io/api/random")
