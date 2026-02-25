@@ -7,7 +7,6 @@ program
     .action((name) => {
         console.log(`Hello ${name}`);
     });
-
 program
     .command("add <num1> <num2>")
     .action((num1, num2) => {
