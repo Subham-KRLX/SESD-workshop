@@ -1,8 +1,7 @@
 # SESD Workshop Project - My CLI Tool
 
-Hey! This is the CLI I built for the SESD workshop. It's a handy little tool that handles a bunch of stuff like math, checking up on my system, and even grabbing info from some APIs.
+A TypeScript CLI built for the SESD workshop using OOP. It handles math, system checks, and integrates with 3 APIs.
 
-I've written it using TypeScript and stuck to some basic OOP concepts (classes were mandatory!) to keep the code clean and easy to follow.
 
 ## Getting Started
 
