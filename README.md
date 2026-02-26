@@ -1,36 +1,42 @@
-# SESD Workshop CLI
+# SESD Workshop Project - My CLI Tool
 
-A powerful, object-oriented CLI tool built with TypeScript, featuring 10 commands and 3 API integrations.
+Hey! This is the CLI I built for the SESD workshop. It's a handy little tool that handles a bunch of stuff like math, checking up on my system, and even grabbing info from some APIs.
 
-## Setup Instructions
+I've written it using TypeScript and stuck to some basic OOP concepts (classes were mandatory!) to keep the code clean and easy to follow.
 
-1.  **Install dependencies**:
+## Getting Started
+
+If you want to run this locally, here's what you need to do:
+
+1.  **Get the packages**:
     ```bash
     npm install
     ```
-2.  **Compile TypeScript**:
+2.  **Build the project**:
     ```bash
     npx tsc
     ```
-3.  **Link globally**:
+3.  **Use it globally**:
     ```bash
     npm link
     ```
 
-## Available Commands
+## What it can do
 
-### Math Operations
-- `mycli add <a> <b>`: Add two numbers
-- `mycli sub <a> <b>`: Subtract two numbers
-- `mycli mul <a> <b>`: Multiply two numbers
-- `mycli div <a> <b>`: Divide two numbers
+I've added about 10 custom commands so far. You just type `mycli` followed by whatever you want.
 
-### System Info
-- `mycli greet <name>`: Simple greeting
-- `mycli sysinfo`: Display OS and memory info
-- `mycli fileinfo <path>`: Display file size and creation date
+### Math (The basics)
+*   `mycli add <n1> <n2>` - Just adds two numbers.
+*   `mycli sub <n1> <n2>` - Subtraction.
+*   `mycli mul <n1> <n2>` - Multiplication.
+*   `mycli div <n1> <n2>` - Dividing numbers (don't try zero!).
 
-### API Integrations
-- `mycli quote`: Fetch a random quote (ZenQuotes API)
-- `mycli github <user>`: Fetch GitHub user stats (GitHub API)
-- `mycli weather <city>`: Fetch current weather (wttr.in API)
+### System Stuff
+*   `mycli greet <name>` - Quick hello.
+*   `mycli sysinfo` - Shows what OS I'm on and how much RAM is free.
+*   `mycli fileinfo <path>` - Check out a file's size and when I created it.
+
+### Cool API Things (The advanced part)
+*   `mycli quote` - Grabs a random motivational quote from ZenQuotes.
+*   `mycli github <user>` - Peeks at someone's GitHub stats (repos, followers, etc).
+*   `mycli weather <city>` - Quick weather check using wttr.in.
