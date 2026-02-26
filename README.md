@@ -39,3 +39,9 @@ I've added about 10 custom commands so far. You just type `mycli` followed by wh
 *   `mycli quote` - Grabs a random motivational quote from ZenQuotes.
 *   `mycli github <user>` - Peeks at someone's GitHub stats (repos, followers, etc).
 *   `mycli weather <city>` - Quick weather check using wttr.in.
+
+## Bonus Features (Flags & Options)
+
+*   **Global Version**: Use `mycli -v` or `mycli --version` to see the current version.
+*   **Shout Mode**: Use `mycli greet <name> --shout` to get a LOUD greeting.
+*   **Simple Sysinfo**: Use `mycli sysinfo --simple` to get just the platform name.

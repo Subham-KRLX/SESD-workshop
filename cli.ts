@@ -5,8 +5,10 @@ const fs = require("fs");
 const os = require("os");
 
 class Actions {
-    greet(n: string) {
-        console.log(`Hello ${n}`);
+    greet(n: string, opt: any) {
+        let msg = `Hello ${n}`;
+        if (opt.shout) msg = msg.toUpperCase() + "!!!";
+        console.log(msg);
     }
     add(a: string, b: string) {
         console.log(Number(a) + Number(b));
@@ -29,7 +31,8 @@ class Actions {
             console.log("Error: file not found");
         }
     }
-    sysinfo() {
+    sysinfo(opt: any) {
+        if (opt.simple) return console.log(os.platform());
         console.log(`OS: ${os.platform()} ${os.arch()}\nFree Mem: ${(os.freemem() / 1024 / 1024).toFixed(2)} MB`);
     }
     async quote() {
@@ -62,17 +65,29 @@ class App {
     constructor() {
         const prog = new Command();
         const act = new Actions();
-        prog.command("greet <n>").action((n: string) => act.greet(n));
+
+        prog.version("1.0.0", "-v, --version");
+
+        prog.command("greet <n>")
+            .option("-s, --shout", "Greeting in caps")
+            .action((n: string, opt: any) => act.greet(n, opt));
+
         prog.command("add <a> <b>").action((a: string, b: string) => act.add(a, b));
         prog.command("sub <a> <b>").action((a: string, b: string) => act.sub(a, b));
         prog.command("mul <a> <b>").action((a: string, b: string) => act.mul(a, b));
         prog.command("div <a> <b>").action((a: string, b: string) => act.div(a, b));
         prog.command("fileinfo <p>").action((p: string) => act.fileinfo(p));
-        prog.command("sysinfo").action(() => act.sysinfo());
+
+        prog.command("sysinfo")
+            .option("--simple", "Show only platform")
+            .action((opt: any) => act.sysinfo(opt));
+
         prog.command("quote").action(() => act.quote());
         prog.command("github <u>").action((u: string) => act.github(u));
         prog.command("weather <c>").action((c: string) => act.weather(c));
+
         prog.parse();
     }
 }
+
 new App();
