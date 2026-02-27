@@ -2,7 +2,6 @@
 
 A TypeScript CLI built for the SESD workshop using OOP. It handles math, system checks, and integrates with 3 APIs.
 
-
 ## Getting Started
 
 If you want to run this locally, here's what you need to do:
