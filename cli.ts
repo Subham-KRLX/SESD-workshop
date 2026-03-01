@@ -4,7 +4,6 @@ const axios = require("axios");
 const fs = require("fs");
 const os = require("os");
 
-
 class Actions {
     greet(n: string, opt: any) {
         let msg = `Hello ${n}`;
