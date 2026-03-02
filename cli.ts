@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+const cli_engine = require('./cli_engine')
+const greet_comand = require('./greet_command')
+const engine = new cli_engine.CLIEngine();
+
 const { Command } = require("commander");
 const axios = require("axios");
 const fs = require("fs");
