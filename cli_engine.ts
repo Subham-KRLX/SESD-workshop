@@ -1,4 +1,4 @@
-const {command} = require('commander');
+const { Command } = require('commander');
 
 class CLIEngine {
     program;
@@ -9,6 +9,12 @@ class CLIEngine {
     registerCommand(commands) {
         commands.forEach(commandClass => {
             const commandInstance = new commandClass(this.program);
+            commandInstance.register(this.program)
         })
     }
+    run(){
+        this.program.parse()
+    }
 }
+module.exports = { CLIEngine }
+export {}
