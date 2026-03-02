@@ -63,6 +63,15 @@ class Actions {
             console.log("Error: weather api fail");
         }
     }
+    async joke() {
+        try {
+            const r = await axios.get("https://official-joke-api.appspot.com/random_joke");
+            console.log(`${r.data.setup}`);
+            console.log(`${r.data.punchline}`);
+        } catch (e) {
+            console.log("Error: joke api fail");
+        }
+    }
 }
 
 class App {
@@ -89,6 +98,7 @@ class App {
         prog.command("quote").action(() => act.quote());
         prog.command("github <u>").action((u: string) => act.github(u));
         prog.command("weather <c>").action((c: string) => act.weather(c));
+        prog.command("joke").action(() => act.joke());
 
         prog.parse();
     }
