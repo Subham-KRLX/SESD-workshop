@@ -26,3 +26,6 @@ constructor(program) {
             });
     }
 }
+
+module.exports = { GreetCommand }
+export {}
