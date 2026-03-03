@@ -2,7 +2,6 @@ const { Command } = require('commander');
 
 class CLIEngine {
     program;
-
     constructor() {
         this.program =  new Command();
     }
