@@ -7,7 +7,6 @@ constructor(program) {
         console.log(`Hello, ${name}!`);
         // return `Hello, ${name}!`;
     }
-
     async fetchJoke(): Promise<string> {
         return "Why do programmers prefer dark mode? Because light attracts bugs!";
     }
