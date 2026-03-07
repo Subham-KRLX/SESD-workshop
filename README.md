@@ -6,6 +6,7 @@ A TypeScript CLI built for the SESD workshop using OOP. It handles math, system 
 
 If you want to run this locally, here's what you need to do:
 
+
 1.  **Get the packages**:
     ```bash
     npm install
